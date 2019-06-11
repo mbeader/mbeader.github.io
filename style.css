@@ -1,0 +1,65 @@
+body {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 10pt;
+}
+
+h1 {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 24pt;
+}
+
+h2 {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 18pt;
+}
+
+h3 {
+  font-family: 'Domine', serif;
+  font-weight: normal;
+  font-size: 14pt;
+}
+
+h4 {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 14pt;
+}
+
+aside * {
+  margin: 5px;
+}
+
+aside > h1 {
+  margin-bottom: 0px;
+}
+
+aside > h2 {
+  margin-top: 0px;
+}
+
+h3 > span {
+  margin: 0px;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+main {
+  float: right;
+  width: 70%;
+}
+
+aside, main {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+
+article h4 {
+  margin-bottom: 0px;
+}
+
+ul { 
+  list-style-type: none;
+} 
