@@ -85,3 +85,14 @@ nav li {
 nav * {
   margin: 10px 0px;
 }
+
+img, video {
+  width: 70%;
+}
+
+figure {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
