@@ -24,7 +24,7 @@ h4 {
   font-size: 14pt;
 }
 
-aside * {
+aside > * {
   margin: 5px;
 }
 
@@ -62,4 +62,26 @@ article h4 {
 
 ul { 
   list-style-type: none;
-} 
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8959a8;
+}
+
+nav {
+  margin-top: 100px;
+}
+
+nav li {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 12pt;
+  font-weight: bold;
+}
+nav * {
+  margin: 10px 0px;
+}
