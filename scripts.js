@@ -1,13 +1,19 @@
 var bg = ['chase', 'dog', 'lmp3', 'mazda', 'mods', 'rebellion', 'thompson', 'wec', 'wet'];
 var info;
+var index;
 
 document.addEventListener('DOMContentLoaded', function() {
-  let index = Math.floor(Math.random()*bg.length);
+  index = Math.floor(Math.random()*bg.length);
   document.body.style = "background: url('bg/" + bg[index] + ".jpg') no-repeat center center fixed; background-size: cover;";
   if(window.location.pathname == '/photos.html') {
     loadInfo(index);
     document.getElementById('next').addEventListener('click', function(){
-      displayInfo(Math.floor(Math.random()*bg.length));
+      if((index+1)%bg.length == 0)
+        index = 0;
+      else
+        index++;
+      displayInfo(index);
+      document.body.style = "background: url('bg/" + bg[index] + ".jpg') no-repeat center center fixed; background-size: cover;";
     });
   }
 });
