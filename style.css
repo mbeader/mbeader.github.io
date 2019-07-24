@@ -69,7 +69,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover, footer > h2:hover {
   color: #8959a8;
 }
 
@@ -95,4 +95,16 @@ figure {
   margin-right: 0px;
   margin-bottom: 20px;
   margin-top: 0px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0%;
+  height: 60px;
+  width: 100%;
+}
+
+footer > h2 {
+  margin-left: 30%;
+  cursor: pointer;
 }
