@@ -4,7 +4,7 @@ var info;
 document.addEventListener('DOMContentLoaded', function() {
   let index = Math.floor(Math.random()*bg.length);
   document.body.style = "background: url('bg/" + bg[index] + ".jpg') no-repeat center center fixed; background-size: cover;";
-  if(window.location.pathname == 'photos.html') {
+  if(window.location.pathname == '/photos.html') {
     loadInfo(index);
     document.getElementById('next').addEventListener('click', function(){
       displayInfo(Math.floor(Math.random()*bg.length));
