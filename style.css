@@ -1,110 +1,111 @@
 body {
-  font-family: 'Anonymous Pro', monospace;
-  font-size: 10pt;
+	font-family: 'Anonymous Pro', monospace;
+	font-size: 14px;
+	background-color: #e8e8e8;
 }
 
 h1 {
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  font-size: 24pt;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 32px;
 }
 
 h2 {
-  font-family: 'Anonymous Pro', monospace;
-  font-size: 18pt;
+	font-family: 'Anonymous Pro', monospace;
+	font-size: 24px;
 }
 
 h3 {
-  font-family: 'Domine', serif;
-  font-weight: normal;
-  font-size: 14pt;
+	font-family: 'Domine', serif;
+	font-weight: normal;
+	font-size: 16px;
 }
 
 h4 {
-  font-family: 'Anonymous Pro', monospace;
-  font-size: 14pt;
+	font-family: 'Anonymous Pro', monospace;
+	font-size: 18px;
 }
 
 aside > * {
-  margin: 5px;
+	margin: 5px;
 }
 
 aside > h1 {
-  margin-bottom: 0px;
+	margin-bottom: 0px;
 }
 
 aside > h2 {
-  margin-top: 0px;
+	margin-top: 0px;
 }
 
 h3 > span {
-  margin: 0px;
+	margin: 0px;
 }
 
 aside {
-  float: left;
-  width: 30%;
+	position: fixed;
+	height: calc(100vh - 10px);
+	float: left;
+	width: 30%;
 }
 
 main {
-  float: right;
-  width: 70%;
+	float: right;
+	width: 70%;
 }
 
 aside, main {
-  display: inline-block;
-  text-align: left;
-  vertical-align: top;
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
 }
 
 article h4 {
-  margin-bottom: 0px;
+	margin-bottom: 0px;
 }
 
 ul { 
-  list-style-type: none;
+	list-style-type: none;
 }
 
 a {
-  color: #000000;
-  text-decoration: none;
+	color: #000000;
+	text-decoration: none;
 }
 
 a:hover, footer > h2:hover {
-  color: #8959a8;
+	color: #8959a8;
 }
 
 nav {
-  margin-top: 100px;
+	margin-top: 100px;
 }
 
 nav li {
-  font-family: 'Anonymous Pro', monospace;
-  font-size: 12pt;
-  font-weight: bold;
+	font-family: 'Anonymous Pro', monospace;
+	font-size: 16px;
+	font-weight: bold;
 }
 nav * {
-  margin: 10px 0px;
+	margin: 10px 0px;
 }
 
 img, video {
-  width: 70%;
+	width: 70%;
 }
 
 figure {
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 20px;
-  margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	margin-top: 0px;
 }
 
-footer {
-  position: fixed;
-  bottom: 0%;
-  height: 60px;
-  width: 100%;
+.bottom {
+	position: absolute;
+	bottom: 0%;
+	width: 90%;
 }
 
-footer > h2 {
-  margin-left: 30%;
-  cursor: pointer;
+.bottom > h2 {
+	cursor: pointer;
 }

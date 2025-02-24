@@ -1,91 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <script type ="application/javascript" src="scripts.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Domine&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="style.css">
-<title>rf2livetiming</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<script type ="application/javascript" src="info.js"></script>
+	<script type ="application/javascript" src="scripts.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Domine&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>rf2livetiming</title>
 </head>
 <body>
-  <aside>
-    <h1>mbeader</h1>
-    <h2>software developer</h2>
-    <h3><span title="Worcester Polytechnic Institute">WPI</span> Computer Science 2018</h3>
-    <h4><a href="https://github.com/mbeader">github.com/mbeader</a></h4></br>
-    <h4><a href="photos.html">photos</a></h4>
-    <nav>
-      <h4><a href="index.html">projects</a></h4>
-      <ul>
-        <li><a href="rf2livetiming.html">rf2livetiming</a></li>
-        <li>soon™</li>
-      </ul>
-    </nav>
-  </aside>
-  <main>
-    <h2>rFactor 2 live timing</h2>
-    live timing for the rFactor 2 multiplayer server<br>
-    free and open source and self-hostable unlike liveracers
-    <article><h4><a href="https://github.com/mbeader/rf2livetiming">rf2livetiming</a></h4>
-        <ul>
-          <li>node.js web application</li>
-          <li>uses socket.io to deliver updates in real time</li>
-          <li>serves current session information for a single rF2 server</li>
-          <li>personal bests are highlighted green, class bests are highlighted purple</li>
-          <li>AI drivers shown in a grayer font color than humans</li>
-          <li>tracks best laps for each driver/car/track combination</li>
-          <li>generates a track map based on a driver's path around the track</li>
-          <li>each class is shown in a different color, which can be customized</li>
-          <li>displays said track and current vehicle locations with class color coding in a canvas</li>
-          <li>laps and maps stored in json</li>
-        </ul>
-      </article>
-      <article><h4><a href="https://github.com/mbeader/rf2livetiming-plugin">rf2livetiming-plugin</a></h4>
-        <ul>
-          <li>c++ rFactor 2 plugin</li>
-          <li>sends scoring updates over UDP</li>
-          <li>reads and sends the lastest results xml file over TCP</li>
-          <li>ideally networking over loopback only but can send data elsewhere</li>
-        </ul>
-      </article>
-      <article><h4>examples</h4><br>
-        <figure>
-          <img src="img/home.png">
-          <figcaption>rf2livetiming in action</figcaption>
-        </figure>
-        <figure>
-          <video autoplay loop muted>
-            <source src="vid/drivers.webm" type="video/webm">
-          </video>
-          <figcaption>bunch of bots loading in</figcaption>
-        </figure>
-        <figure>
-          <video autoplay loop muted>
-            <source src="vid/live.webm" type="video/webm">
-          </video>
-          <figcaption>basic live timing</figcaption>
-        </figure>
-        <figure>
-          <video autoplay loop muted>
-            <source src="vid/map.webm" type="video/webm">
-          </video>
-          <figcaption>map generation</figcaption>
-        </figure>
-        <figure>
-          <video autoplay loop muted>
-            <source src="vid/chat.webm" type="video/webm">
-          </video>
-          <figcaption>eavesdropping</figcaption>
-        </figure>
-        <figure>
-          <img src="img/live.png">
-          <figcaption>extended live timing</figcaption>
-        </figure>
-        <figure>
-          <img src="img/offline.png">
-          <figcaption>rf2livetiming not in action</figcaption>
-        </figure>
-      </article>
-  </main>
+	<aside>
+		<h1><a href="https://github.com/mbeader">mbeader</a></h1>
+		<h2>Software developer</h2>
+		<h3><span title="Worcester Polytechnic Institute">WPI</span> Computer Science 2018</h3>
+		<nav>
+			<h4><a href="index.html">Projects</a></h4>
+			<ul>
+				<li><a href="rf2livetiming.html">rf2livetiming</a></li>
+			</ul>
+			<h4><a href="photos.html">Photos</a></h4>
+		</nav>
+		<div class="bottom">
+			<a><img/></a>
+		</div>
+	</aside>
+	<main>
+		<h2>rFactor 2 live timing</h2>
+		Live timing for the rFactor 2 multiplayer server<br>
+		Free and open source and self-hostable, unlike Liveracers (RIP)
+		<article>
+			<h4><a href="https://github.com/mbeader/rf2livetiming">rf2livetiming</a></h4>
+			<ul>
+				<li>Node.js web application</li>
+				<li>Uses socket.io to deliver updates in real time</li>
+				<li>Serves current session information for a single rF2 server</li>
+				<li>Personal bests are highlighted green, class bests are highlighted purple</li>
+				<li>AI drivers shown in a grayer font color than humans</li>
+				<li>Tracks best laps for each driver/car/track combination</li>
+				<li>Generates a track map based on a driver's path around the track</li>
+				<li>Each class is shown in a different color, which can be customized</li>
+				<li>Displays said track and current vehicle locations with class color coding in a canvas</li>
+				<li>Laps and maps stored in JSON files</li>
+			</ul>
+		</article>
+		<article>
+			<h4><a href="https://github.com/mbeader/rf2livetiming-plugin">rf2livetiming-plugin</a></h4>
+			<ul>
+				<li>C++ rFactor 2 plugin</li>
+				<li>Sends scoring updates over UDP</li>
+				<li>Reads and sends the lastest results XML file over TCP</li>
+				<li>Networking over loopback preferred, but can send data elsewhere</li>
+			</ul>
+		</article>
+		<article>
+			<h4>Examples</h4><br>
+			<figure>
+				<img src="img/home.png">
+				<figcaption>rf2livetiming in action</figcaption>
+			</figure>
+			<figure>
+				<video autoplay loop muted>
+					<source src="vid/drivers.webm" type="video/webm">
+				</video>
+				<figcaption>Bunch of bots loading in</figcaption>
+			</figure>
+			<figure>
+				<video autoplay loop muted>
+					<source src="vid/live.webm" type="video/webm">
+				</video>
+				<figcaption>Basic live timing</figcaption>
+			</figure>
+			<figure>
+				<video autoplay loop muted>
+					<source src="vid/map.webm" type="video/webm">
+				</video>
+				<figcaption>Map generation</figcaption>
+			</figure>
+			<figure>
+				<video autoplay loop muted>
+					<source src="vid/chat.webm" type="video/webm">
+				</video>
+				<figcaption>Eavesdropping</figcaption>
+			</figure>
+			<figure>
+				<img src="img/live.png">
+				<figcaption>Extended live timing</figcaption>
+			</figure>
+			<figure>
+				<img src="img/offline.png">
+				<figcaption>rf2livetiming not in action</figcaption>
+			</figure>
+		</article>
+	</main>
 </body>
 </html>
