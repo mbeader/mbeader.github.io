@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<script type ="application/javascript" src="info.js"></script>
+	<script type ="application/javascript" src="scripts.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Domine&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>LMUSessionTracker</title>
+</head>
+<body>
+	<aside>
+		<h1><a href="https://github.com/mbeader">mbeader</a></h1>
+		<h2>Software developer</h2>
+		<h3><span title="Worcester Polytechnic Institute">WPI</span> Computer Science 2018</h3>
+		<nav>
+			<h4><a href="index.html">Projects</a></h4>
+			<ul>
+				<li><a href="LMUSessionTracker.html">LMUSessionTracker</a></li>
+				<li><a href="rf2livetiming.html">rf2livetiming</a></li>
+			</ul>
+			<h4><a href="photos.html">Photos</a></h4>
+		</nav>
+		<div class="bottom">
+			<a><img/></a>
+		</div>
+	</aside>
+	<main>
+		<h2>Le Mans Ultimate session tracker</h2>
+		Session tracking for Le Mans Ultimate (LMU)<br>
+		Free and open source and self-hostable, unlike Liveracers (RIP)
+		<article>
+			<h4><a href="https://github.com/mbeader/LMUSessionTracker">LMUSessionTracker</a></h4>
+			<ul>
+				<li>C# ASP.NET Core Web API back-end, Angular TypeScript front-end</li>
+				<li>C# Native AOT console client</li>
+				<li>Acquires data by polling several endpoints of the game's REST API</li>
+				<li>Uses SignalR websockets to deliver updates in real time</li>
+				<li>Serves current session information for any number of clients</li>
+				<li>Identifies clients in the same session and manages which should provide data</li>
+				<li>Tracks all lap times, providing a historical view for all cars</li>
+				<li>Displays best laps for each driver/car/track combination</li>
+				<li>Provides an entry list which includes all team members in online endurance races</li>
+				<li>Data stored in an SQLite database</li>
+			</ul>
+		</article>
+		<article>
+			<h4>Details and motivation</h4>
+			<p>
+				Le Mans Ultimate (LMU) is a sim racing game developed by Studio 397 as a successor to rFactor 2.
+				The game does not feature a dedicated server,
+				so online multiplayer can only be done through their online system, Race Control.
+				They do provide a way to host your own races, however the experience is severely lacking.
+				In addition, a major aspect of the game is the ability to compete in team endurance races.
+			</p>
+			<p>
+				In the past, such events would be hosted by third-parties using the dedicated server,
+				with a live timing service, such as <a href="rf2livetiming.html">rf2livetiming</a>, hooked up to it.
+				The current state of the server, live standings, and best lap times would always be available outside of the game.
+				Even within the game, Le Mans Ultimate disappoints.
+				As of February 1st, 2026,
+				it is still impossible to view your own (or anyone else's) past lap times for the current session,
+				a feature found in all of LMU's predecessors, every other sim racing game, and LMU itself until they removed it.
+			</p>
+			<p>
+				LMUSessionTracker strives to be a solution for session information the game user interface lacks,
+				while also providing features reminiscent of classic server live timing services.
+				This project specifically targets supporting team endurance events and hosted sessions.
+				All team members (or hosted session drivers) can use the client and through a combination of session properties
+				(type, time, phase, entries, etc) identified as the same session.
+				Only one client will provide the majority of the data.
+				The others will sit (effectively) idle,
+				but may be promoted when the main data provider leaves the session or disconnects.
+			</p>
+			<p>
+				Session identification through the REST API endpoints is nontrivial.
+				Endpoints may return data inconsistent with each other, or not at all.
+				Care is taken to prevent the client from sending these "bad" states,
+				which are most common during session transitions, loading, and entering/exiting the car.
+			</p>
+		</article>
+		<article>
+			<h4>Examples</h4><br>
+			<figure>
+				<img src="LMUSessionTracker/sessions.png">
+				<figcaption>LMUSessionTracker with sessions tracked</figcaption>
+			</figure>
+			<figure>
+				<video autoplay loop muted>
+					<source src="LMUSessionTracker/standings.webm" type="video/webm">
+				</video>
+				<figcaption>Live timing, accelerated and anonymized</figcaption>
+			</figure>
+			<figure>
+				<img src="LMUSessionTracker/bestlaps.png">
+				<figcaption>Best laps, with several filters available (names removed)</figcaption>
+			</figure>
+		</article>
+	</main>
+</body>
+</html>
