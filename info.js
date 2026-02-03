@@ -102,5 +102,29 @@ const info = [{
 		event: "Petit Le Mans",
 		series: "IMSA WeatherTech Sportscar Championship",
 		subject: "GTP field, with a couple LMP3s mised in"
+	}, {
+		name: "trucks",
+		date: "2025-06-28",
+		track: "Lime Rock Park",
+		location: "Turn 4 exit",
+		event: "Inaugural LiUNA! 150 NASCAR Truck Series race at Lime Rock",
+		series: "NASCAR Craftsman Truck Series",
+		subject: "Connor Mosack pushed off the track on the final restart late in the race"
+	}, {
+		name: "sunset",
+		date: "2026-01-24",
+		track: "Daytona International Speedway",
+		location: "The grandstands between turns 1 and 6, facing speedway 1 and 2",
+		event: "Rolex 24 at Daytona",
+		series: "IMSA WeatherTech Sportscar Championship",
+		subject: "Sun starting to set behind the banking"
+	}, {
+		name: "fog",
+		date: "2026-01-25",
+		track: "Daytona International Speedway",
+		location: "International horseshoe, facing turn 1",
+		event: "Rolex 24 at Daytona",
+		series: "IMSA WeatherTech Sportscar Championship",
+		subject: "Thick fog forced a 6 hour 33 minute full course yellow"
 	}
 ];
